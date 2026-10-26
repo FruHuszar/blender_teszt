@@ -1,7 +1,7 @@
-// Persona Studio export · Procedural Garden · 2026-10-26 · re-export overwrites this file
+// Persona Studio export · Neon City · 2026-10-26 · re-export overwrites this file
 import { Icon } from "../Icon";
 
-/** Settings · skin Moss Button · texts: context/personaText.ts → "settings" */
+/** Settings · skin Neon Button · texts: context/personaText.ts → "settings" */
 export function Settings() {
   return (
     <>

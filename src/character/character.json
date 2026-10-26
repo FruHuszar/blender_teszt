@@ -1,8 +1,8 @@
 {
-  "generator": "Persona Character 1.0",
+  "generator": "Persona Studio 2.5",
   "glb": "character.glb",
   "fps": 30.0,
-  "height": 7.1908,
+  "height": 1.6317,
   "axes": {
     "forward": [
       0,
@@ -37,6 +37,7 @@
     "foot_l": "foot.L",
     "foot_r": "foot.R"
   },
+  "rig": "human",
   "clips": [
     {
       "name": "idle_breathe",
@@ -67,52 +68,10 @@
       "loop": true
     },
     {
-      "name": "bored_look_around",
-      "role": "bored",
-      "frames": 150,
-      "seconds": 5.0,
-      "loop": false
-    },
-    {
-      "name": "bored_stretch",
-      "role": "bored",
-      "frames": 150,
-      "seconds": 5.0,
-      "loop": false
-    },
-    {
-      "name": "bored_hum",
-      "role": "bored",
-      "frames": 180,
-      "seconds": 6.0,
-      "loop": false
-    },
-    {
       "name": "click_tilt",
       "role": "click",
       "frames": 24,
       "seconds": 0.8,
-      "loop": false
-    },
-    {
-      "name": "click_nod",
-      "role": "click",
-      "frames": 24,
-      "seconds": 0.8,
-      "loop": false
-    },
-    {
-      "name": "click_glance",
-      "role": "click",
-      "frames": 30,
-      "seconds": 1.0,
-      "loop": false
-    },
-    {
-      "name": "task_complete",
-      "role": "complete",
-      "frames": 60,
-      "seconds": 2.0,
       "loop": false
     }
   ],
@@ -120,8 +79,8 @@
   "draco": false,
   "outline": {
     "enabled": true,
-    "width": 0.5,
-    "color": "#202d1b",
+    "width": 0.45,
+    "color": "#37060c",
     "note": "inverted hull: duplicate mesh, scale along normals by width*0.4% of height, back faces only"
   },
   "behavior": {
@@ -132,7 +91,7 @@
       "idle_dramatic"
     ],
     "bored_after_seconds": 20.0,
-    "click_cooldown_seconds": 1.2000000476837158,
+    "click_cooldown_seconds": 1.2,
     "crossfade_seconds": 0.25
   },
   "look_at": {
@@ -152,16 +111,16 @@
     "max_pitch_deg": 20.0
   },
   "look": {
-    "toon": 0.6,
-    "threshold": 0.4,
-    "softness": 0.16,
+    "toon": 0.5636,
+    "threshold": 0.42,
+    "softness": 0.1,
     "light_gain": 1.0,
-    "shadow_color": "#657961",
-    "rim_color": "#b89a4e",
-    "rim_strength": 0.6,
-    "rim_width": 0.3,
-    "saturation": 0.85,
-    "brightness": 1.02,
+    "shadow_color": "#3f456f",
+    "rim_color": "#ffa8ac",
+    "rim_strength": 1.8,
+    "rim_width": 0.5,
+    "saturation": 1.05,
+    "brightness": 0.98,
     "formula": "albedo = mix(flat, tex, textureMix); albedo = mix(albedo, clamp(tint*luma(albedo)*2), recolor); albedo = hsv(albedo, saturation, brightness); L = luma(diffuse light)*lightGain; t = mix(min(L,1), smoothstep(threshold-softness, threshold+softness, L), toon); rim = clamp(smoothstep(1-rimWidth, 1, facing)*(0.55+0.45t)*rimStrength) with facing = 1-|dot(N,V)|; color = mix(albedo*mix(shadowColor, 1, t), rimColor, rim) + albedo*glow"
   },
   "materials": [
@@ -169,9 +128,9 @@
       "name": "PCH_Test_Dress",
       "role": "outfit",
       "customizable": true,
-      "flat_color": "#f6f1e7",
+      "flat_color": "#f6e0c0",
       "texture_mix": 0.0,
-      "tint": "#ffffff",
+      "tint": "#f3ffef",
       "recolor": 0.0,
       "glow": 0.0
     }

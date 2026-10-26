@@ -1,4 +1,4 @@
-// Persona Studio export · Procedural Garden · 2026-10-26 · re-export overwrites this file
+// Persona Studio export · Neon City · 2026-10-26 · re-export overwrites this file
 import type { RadarAxis } from "../context/personaText";
 
 type Props = {
