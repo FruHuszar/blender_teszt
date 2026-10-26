@@ -1,4 +1,4 @@
-// Persona Studio export · Neon City + Soft Paper · 2026-10-26 · re-export overwrites this file
+// Persona Studio export · Procedural Garden · 2026-10-26 · re-export overwrites this file
 import type { CSSProperties } from "react";
 
 export type IconName = "GEAR" | "CHECK" | "PLAY" | "NOTE" | "CLOCK" | "STAR" | "SPARKLE" | "HEART" | "USER" | "BASKET" | "PLUS" | "CLOSE" | "FLAME" | "CALENDAR" | "CHART" | "COIN" | "LIST" | "BELL";

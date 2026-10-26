@@ -1,8 +1,11 @@
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+// Persona Studio web project (written once; your edits are kept on re-export)
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: '/blender_teszt/',
-})
+  plugins: [react(), tailwindcss()],
+  // relative asset paths: the build works from any folder (GitHub Pages sub-path, file server, Laravel public/)
+  base: "./",
+  build: { chunkSizeWarningLimit: 1200 },
+});

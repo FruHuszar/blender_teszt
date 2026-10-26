@@ -2,7 +2,7 @@
   "generator": "Persona Character 1.0",
   "glb": "character.glb",
   "fps": 30.0,
-  "height": 3.2332,
+  "height": 7.1908,
   "axes": {
     "forward": [
       0,
@@ -117,10 +117,11 @@
     }
   ],
   "rig_mode": "full",
+  "draco": false,
   "outline": {
     "enabled": true,
-    "width": 0.3,
-    "color": "#ff4fa3",
+    "width": 0.5,
+    "color": "#202d1b",
     "note": "inverted hull: duplicate mesh, scale along normals by width*0.4% of height, back faces only"
   },
   "behavior": {
@@ -151,16 +152,16 @@
     "max_pitch_deg": 20.0
   },
   "look": {
-    "toon": 1.0,
-    "threshold": 0.42,
-    "softness": 0.04,
+    "toon": 0.6,
+    "threshold": 0.4,
+    "softness": 0.16,
     "light_gain": 1.0,
-    "shadow_color": "#111a33",
-    "rim_color": "#ffe6f3",
-    "rim_strength": 0.9014,
-    "rim_width": 0.35,
-    "saturation": 1.15,
-    "brightness": 1.06,
+    "shadow_color": "#657961",
+    "rim_color": "#b89a4e",
+    "rim_strength": 0.6,
+    "rim_width": 0.3,
+    "saturation": 0.85,
+    "brightness": 1.02,
     "formula": "albedo = mix(flat, tex, textureMix); albedo = mix(albedo, clamp(tint*luma(albedo)*2), recolor); albedo = hsv(albedo, saturation, brightness); L = luma(diffuse light)*lightGain; t = mix(min(L,1), smoothstep(threshold-softness, threshold+softness, L), toon); rim = clamp(smoothstep(1-rimWidth, 1, facing)*(0.55+0.45t)*rimStrength) with facing = 1-|dot(N,V)|; color = mix(albedo*mix(shadowColor, 1, t), rimColor, rim) + albedo*glow"
   },
   "materials": [
@@ -168,7 +169,7 @@
       "name": "PCH_Test_Dress",
       "role": "outfit",
       "customizable": true,
-      "flat_color": "#ffc3f2",
+      "flat_color": "#f6f1e7",
       "texture_mix": 0.0,
       "tint": "#ffffff",
       "recolor": 0.0,

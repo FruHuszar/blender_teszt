@@ -1,4 +1,4 @@
-// Persona Studio export · Neon City + Soft Paper · 2026-10-26 · re-export overwrites this file
+// Persona Studio export · Procedural Garden · 2026-10-26 · re-export overwrites this file
 import { useText } from "../context/PersonaTextContext";
 import { Icon } from "./Icon";
 import { CHIP_ICON, CHIP_SIZE, CHIP_SKIN, DOCK } from "./layout";

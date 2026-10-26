@@ -1,4 +1,4 @@
-// Persona Studio export · Neon City + Soft Paper · 2026-10-26 · re-export overwrites this file
+// Persona Studio export · Procedural Garden · 2026-10-26 · re-export overwrites this file
 // ALL texts of the UI, one object per box (keys match the Blender components).
 // Edit them here, or override any of them at runtime: <App text={{ todo: { title: "Today" } }} />
 
@@ -34,7 +34,6 @@ export const PERSONA_TEXT = {
   },
   music: {
     title: "Vibe",
-    track: "Lo-fi focus",
   },
   upcoming: {
     title: "Upcoming",

@@ -1,9 +1,9 @@
 {
-  "generator": "Persona Studio 2.0",
-  "style": "neon_city",
+  "generator": "Persona Studio 2.2",
+  "style": "procedural_garden",
   "fps": 30,
-  "loop_frames": 24,
-  "loop_seconds": 0.8,
+  "loop_frames": 240,
+  "loop_seconds": 8.0,
   "breakpoints": {
     "base": 0,
     "md": 768,
@@ -27,61 +27,61 @@
   },
   "focus": [
     0.0,
-    1.15,
+    -4.47101,
     -0.0
   ],
   "shots": {
     "base": {
-      "fov": 29.4,
-      "distance": 3.515,
-      "yaw": 15.0,
-      "pitch": -1.1,
+      "fov": 30.8,
+      "distance": 3.8025,
+      "yaw": 9.0,
+      "pitch": 2.3,
       "anchor_x": 0.5,
-      "anchor_y": 0.452,
+      "anchor_y": 0.434,
       "position": [
-        0.90958,
-        1.14052,
-        3.3946
+        0.59436,
+        -4.31241,
+        3.75266
       ],
       "target": [
         0.0,
-        1.208,
+        -4.46501,
         -0.0
       ]
     },
     "md": {
-      "fov": 27.4,
-      "distance": 4.255,
-      "yaw": 17.0,
-      "pitch": -1.1,
+      "fov": 28.8,
+      "distance": 4.68,
+      "yaw": 11.0,
+      "pitch": 2.3,
       "anchor_x": 0.5,
-      "anchor_y": 0.392,
+      "anchor_y": 0.374,
       "position": [
-        1.24381,
-        1.12631,
-        4.06833
+        0.89227,
+        -4.27719,
+        4.59031
       ],
       "target": [
         0.0,
-        1.208,
+        -4.46501,
         -0.0
       ]
     },
     "lg": {
-      "fov": 25.4,
-      "distance": 4.07,
-      "yaw": 19.0,
-      "pitch": -2.1,
-      "anchor_x": 0.45,
-      "anchor_y": 0.442,
+      "fov": 25.8,
+      "distance": 4.485,
+      "yaw": 11.0,
+      "pitch": 1.3,
+      "anchor_x": 0.5,
+      "anchor_y": 0.414,
       "position": [
-        1.32417,
-        1.05886,
-        3.84568
+        0.85556,
+        -4.36326,
+        4.40146
       ],
       "target": [
         0.0,
-        1.208,
+        -4.46501,
         -0.0
       ]
     }
@@ -91,46 +91,73 @@
       "name": "PS_Key",
       "type": "sun",
       "direction": [
-        0.54168,
-        -0.64279,
-        -0.54168
+        0.51079,
+        -0.66262,
+        -0.54775
       ],
-      "color": "#ede9ff",
-      "strength": 2.09
+      "color": "#fffaf1",
+      "color_linear": [
+        1.0,
+        0.96,
+        0.88
+      ],
+      "strength": 2.67,
+      "note": "sun: a white surface facing it gets strength / pi (= three.js DirectionalLight)"
     },
     {
       "name": "PS_Fill",
       "type": "sun",
       "direction": [
-        -0.58256,
+        -0.51984,
         -0.42262,
-        0.69427
+        0.7424
       ],
-      "color": "#b1c2ff",
-      "strength": 0.2
+      "color": "#e1f3e1",
+      "color_linear": [
+        0.75,
+        0.9,
+        0.75
+      ],
+      "strength": 0.366,
+      "note": "sun: a white surface facing it gets strength / pi (= three.js DirectionalLight)"
     },
     {
       "name": "PS_Rim",
       "type": "sun",
       "direction": [
-        -0.30199,
-        -0.46947,
-        0.8297
+        -0.24615,
+        -0.30902,
+        0.91865
       ],
-      "color": "#fface0",
-      "strength": 4.8
+      "color": "#ffefc4",
+      "color_linear": [
+        1.0,
+        0.86,
+        0.55
+      ],
+      "strength": 0.896,
+      "note": "sun: a white surface facing it gets strength / pi (= three.js DirectionalLight)"
     }
   ],
+  "world": {
+    "color_linear": [
+      0.85499,
+      0.87137,
+      0.76815
+    ],
+    "strength": 0.23,
+    "note": "uniform world light: three.js AmbientLight(color, PI * strength)"
+  },
   "palette": {
-    "void": "#070a16",
-    "deep": "#111a33",
-    "mist": "#2b3560",
-    "jade": "#ff4fa3",
-    "gold": "#c49bff",
-    "glow": "#ffd3ea",
-    "ember": "#ff2e78",
-    "ivory": "#f7f0ff",
-    "ink": "#070a16"
+    "void": "#15291b",
+    "deep": "#1f422f",
+    "mist": "#c9cfb8",
+    "jade": "#4a7350",
+    "gold": "#b89a4e",
+    "glow": "#fbf8e9",
+    "ember": "#c7743d",
+    "ivory": "#f7f5ea",
+    "ink": "#25331f"
   },
   "plates": {
     "landscape": {
