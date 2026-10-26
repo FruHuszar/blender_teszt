@@ -5,7 +5,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  // relative asset paths: the build works from any folder (GitHub Pages sub-path, file server, Laravel public/)
+  // relative asset paths:the build works from any folder (GitHub Pages sub-path, file server, Laravel public/)
   base: "./",
   build: { chunkSizeWarningLimit: 1200 },
 });
