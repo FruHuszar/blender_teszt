@@ -1,0 +1,178 @@
+{
+  "generator": "Persona Character 1.0",
+  "glb": "character.glb",
+  "fps": 30.0,
+  "height": 3.2332,
+  "axes": {
+    "forward": [
+      0,
+      0,
+      1
+    ],
+    "up": [
+      0,
+      1,
+      0
+    ],
+    "note": "glTF space, character faces +Z"
+  },
+  "bones": {
+    "hips": "hips",
+    "spine": "spine",
+    "chest": "chest",
+    "neck": "neck",
+    "head": "head",
+    "shoulder_l": "shoulder.L",
+    "shoulder_r": "shoulder.R",
+    "upper_arm_l": "upper_arm.L",
+    "upper_arm_r": "upper_arm.R",
+    "lower_arm_l": "forearm.L",
+    "lower_arm_r": "forearm.R",
+    "hand_l": "hand.L",
+    "hand_r": "hand.R",
+    "upper_leg_l": "thigh.L",
+    "upper_leg_r": "thigh.R",
+    "lower_leg_l": "shin.L",
+    "lower_leg_r": "shin.R",
+    "foot_l": "foot.L",
+    "foot_r": "foot.R"
+  },
+  "clips": [
+    {
+      "name": "idle_breathe",
+      "role": "idle",
+      "frames": 120,
+      "seconds": 4.0,
+      "loop": true
+    },
+    {
+      "name": "idle_sway",
+      "role": "idle",
+      "frames": 180,
+      "seconds": 6.0,
+      "loop": true
+    },
+    {
+      "name": "idle_cute",
+      "role": "idle",
+      "frames": 120,
+      "seconds": 4.0,
+      "loop": true
+    },
+    {
+      "name": "idle_dramatic",
+      "role": "idle",
+      "frames": 180,
+      "seconds": 6.0,
+      "loop": true
+    },
+    {
+      "name": "bored_look_around",
+      "role": "bored",
+      "frames": 150,
+      "seconds": 5.0,
+      "loop": false
+    },
+    {
+      "name": "bored_stretch",
+      "role": "bored",
+      "frames": 150,
+      "seconds": 5.0,
+      "loop": false
+    },
+    {
+      "name": "bored_hum",
+      "role": "bored",
+      "frames": 180,
+      "seconds": 6.0,
+      "loop": false
+    },
+    {
+      "name": "click_tilt",
+      "role": "click",
+      "frames": 24,
+      "seconds": 0.8,
+      "loop": false
+    },
+    {
+      "name": "click_nod",
+      "role": "click",
+      "frames": 24,
+      "seconds": 0.8,
+      "loop": false
+    },
+    {
+      "name": "click_glance",
+      "role": "click",
+      "frames": 30,
+      "seconds": 1.0,
+      "loop": false
+    },
+    {
+      "name": "task_complete",
+      "role": "complete",
+      "frames": 60,
+      "seconds": 2.0,
+      "loop": false
+    }
+  ],
+  "rig_mode": "full",
+  "outline": {
+    "enabled": true,
+    "width": 0.3,
+    "color": "#ff4fa3",
+    "note": "inverted hull: duplicate mesh, scale along normals by width*0.4% of height, back faces only"
+  },
+  "behavior": {
+    "idle": [
+      "idle_breathe",
+      "idle_sway",
+      "idle_cute",
+      "idle_dramatic"
+    ],
+    "bored_after_seconds": 20.0,
+    "click_cooldown_seconds": 1.2000000476837158,
+    "crossfade_seconds": 0.25
+  },
+  "look_at": {
+    "bones": [
+      {
+        "slot": "neck",
+        "bone": "neck",
+        "weight": 0.3
+      },
+      {
+        "slot": "head",
+        "bone": "head",
+        "weight": 0.6
+      }
+    ],
+    "max_yaw_deg": 35.0,
+    "max_pitch_deg": 20.0
+  },
+  "look": {
+    "toon": 1.0,
+    "threshold": 0.42,
+    "softness": 0.04,
+    "light_gain": 1.0,
+    "shadow_color": "#111a33",
+    "rim_color": "#ffe6f3",
+    "rim_strength": 0.9014,
+    "rim_width": 0.35,
+    "saturation": 1.15,
+    "brightness": 1.06,
+    "formula": "albedo = mix(flat, tex, textureMix); albedo = mix(albedo, clamp(tint*luma(albedo)*2), recolor); albedo = hsv(albedo, saturation, brightness); L = luma(diffuse light)*lightGain; t = mix(min(L,1), smoothstep(threshold-softness, threshold+softness, L), toon); rim = clamp(smoothstep(1-rimWidth, 1, facing)*(0.55+0.45t)*rimStrength) with facing = 1-|dot(N,V)|; color = mix(albedo*mix(shadowColor, 1, t), rimColor, rim) + albedo*glow"
+  },
+  "materials": [
+    {
+      "name": "PCH_Test_Dress",
+      "role": "outfit",
+      "customizable": true,
+      "flat_color": "#ffc3f2",
+      "texture_mix": 0.0,
+      "tint": "#ffffff",
+      "recolor": 0.0,
+      "glow": 0.0
+    }
+  ]
+}

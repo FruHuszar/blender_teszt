@@ -1,0 +1,151 @@
+{
+  "generator": "Persona Studio 2.0",
+  "style": "neon_city",
+  "fps": 30,
+  "loop_frames": 24,
+  "loop_seconds": 0.8,
+  "breakpoints": {
+    "base": 0,
+    "md": 768,
+    "lg": 1024
+  },
+  "coordinates": "glTF / three.js (y up, character faces +z)",
+  "camera_model": {
+    "fov": "vertical, degrees (PerspectiveCamera.fov)",
+    "placement": "camera at position, looking at target (per breakpoint, chosen by window width like Tailwind)",
+    "anchor": "focus point screen position 0..1 from left/top, kept for any window size via view offset",
+    "view_offset": "x = (0.5 - anchor_x) * W ; y = (0.5 - anchor_y) * H ; camera.setViewOffset(W, H, x, y, W, H)"
+  },
+  "layers": {
+    "order": [
+      "backdrop video (object-fit: cover)",
+      "three.js canvas (transparent, character)",
+      "foreground png (object-fit: cover, pointer-events: none)",
+      "UI (App.tsx + components/)"
+    ],
+    "plate_choice": "portrait plate when window width < height, else landscape"
+  },
+  "focus": [
+    0.0,
+    1.15,
+    -0.0
+  ],
+  "shots": {
+    "base": {
+      "fov": 29.4,
+      "distance": 3.515,
+      "yaw": 15.0,
+      "pitch": -1.1,
+      "anchor_x": 0.5,
+      "anchor_y": 0.452,
+      "position": [
+        0.90958,
+        1.14052,
+        3.3946
+      ],
+      "target": [
+        0.0,
+        1.208,
+        -0.0
+      ]
+    },
+    "md": {
+      "fov": 27.4,
+      "distance": 4.255,
+      "yaw": 17.0,
+      "pitch": -1.1,
+      "anchor_x": 0.5,
+      "anchor_y": 0.392,
+      "position": [
+        1.24381,
+        1.12631,
+        4.06833
+      ],
+      "target": [
+        0.0,
+        1.208,
+        -0.0
+      ]
+    },
+    "lg": {
+      "fov": 25.4,
+      "distance": 4.07,
+      "yaw": 19.0,
+      "pitch": -2.1,
+      "anchor_x": 0.45,
+      "anchor_y": 0.442,
+      "position": [
+        1.32417,
+        1.05886,
+        3.84568
+      ],
+      "target": [
+        0.0,
+        1.208,
+        -0.0
+      ]
+    }
+  },
+  "lights": [
+    {
+      "name": "PS_Key",
+      "type": "sun",
+      "direction": [
+        0.54168,
+        -0.64279,
+        -0.54168
+      ],
+      "color": "#ede9ff",
+      "strength": 2.09
+    },
+    {
+      "name": "PS_Fill",
+      "type": "sun",
+      "direction": [
+        -0.58256,
+        -0.42262,
+        0.69427
+      ],
+      "color": "#b1c2ff",
+      "strength": 0.2
+    },
+    {
+      "name": "PS_Rim",
+      "type": "sun",
+      "direction": [
+        -0.30199,
+        -0.46947,
+        0.8297
+      ],
+      "color": "#fface0",
+      "strength": 4.8
+    }
+  ],
+  "palette": {
+    "void": "#070a16",
+    "deep": "#111a33",
+    "mist": "#2b3560",
+    "jade": "#ff4fa3",
+    "gold": "#c49bff",
+    "glow": "#ffd3ea",
+    "ember": "#ff2e78",
+    "ivory": "#f7f0ff",
+    "ink": "#070a16"
+  },
+  "plates": {
+    "landscape": {
+      "width": 1920,
+      "height": 1080,
+      "video": "bg_landscape.mp4",
+      "poster": "bg_landscape_poster.jpg",
+      "foreground": "fg_landscape.png"
+    },
+    "portrait": {
+      "width": 1080,
+      "height": 1920,
+      "video": "bg_portrait.mp4",
+      "poster": "bg_portrait_poster.jpg",
+      "foreground": "fg_portrait.png"
+    }
+  }
+}
