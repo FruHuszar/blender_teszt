@@ -1,4 +1,4 @@
-// Persona Studio export · Neon City · 2026-10-26 · re-export overwrites this file
+// Persona Studio export · GirliePop + Soft Paper · 2026-10-26 · re-export overwrites this file
 // Run the project: npm install, then npm run dev (see README.md).
 import "./persona.css";
 import { useState } from "react";
@@ -30,8 +30,6 @@ export default function App({ text }: { text?: PersonaTextOverrides }) {
         <PersonaCharacter />
         <img className="pointer-events-none absolute inset-0 size-full object-cover portrait:hidden" src={assetFglandscape} alt="" />
         <img className="pointer-events-none absolute inset-0 size-full object-cover landscape:hidden" src={assetFgportrait} alt="" />
-        <div className="pb-vignette" />
-        <div className="pb-grain" />
         <div className={ROOT}>
           {BOXES.map((b) => (
             <PersonaPanel key={b.key} box={b} />

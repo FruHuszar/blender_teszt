@@ -2,7 +2,7 @@
   "generator": "Persona Studio 2.5",
   "glb": "character.glb",
   "fps": 30.0,
-  "height": 1.6317,
+  "height": 1.2157,
   "axes": {
     "forward": [
       0,
@@ -16,121 +16,109 @@
     ],
     "note": "glTF space, character faces +Z"
   },
-  "bones": {
-    "hips": "hips",
-    "spine": "spine",
-    "chest": "chest",
-    "neck": "neck",
-    "head": "head",
-    "shoulder_l": "shoulder.L",
-    "shoulder_r": "shoulder.R",
-    "upper_arm_l": "upper_arm.L",
-    "upper_arm_r": "upper_arm.R",
-    "lower_arm_l": "forearm.L",
-    "lower_arm_r": "forearm.R",
-    "hand_l": "hand.L",
-    "hand_r": "hand.R",
-    "upper_leg_l": "thigh.L",
-    "upper_leg_r": "thigh.R",
-    "lower_leg_l": "shin.L",
-    "lower_leg_r": "shin.R",
-    "foot_l": "foot.L",
-    "foot_r": "foot.R"
-  },
-  "rig": "human",
+  "bones": {},
+  "rig": "chain",
   "clips": [
     {
-      "name": "idle_breathe",
+      "name": "idle",
       "role": "idle",
-      "frames": 120,
-      "seconds": 4.0,
+      "frames": 0,
+      "seconds": 0,
       "loop": true
-    },
-    {
-      "name": "idle_sway",
-      "role": "idle",
-      "frames": 180,
-      "seconds": 6.0,
-      "loop": true
-    },
-    {
-      "name": "idle_cute",
-      "role": "idle",
-      "frames": 120,
-      "seconds": 4.0,
-      "loop": true
-    },
-    {
-      "name": "idle_dramatic",
-      "role": "idle",
-      "frames": 180,
-      "seconds": 6.0,
-      "loop": true
-    },
-    {
-      "name": "click_tilt",
-      "role": "click",
-      "frames": 24,
-      "seconds": 0.8,
-      "loop": false
     }
   ],
   "rig_mode": "full",
   "draco": false,
   "outline": {
     "enabled": true,
-    "width": 0.45,
-    "color": "#37060c",
+    "width": 0.7,
+    "color": "#422734",
     "note": "inverted hull: duplicate mesh, scale along normals by width*0.4% of height, back faces only"
   },
   "behavior": {
     "idle": [
-      "idle_breathe",
-      "idle_sway",
-      "idle_cute",
-      "idle_dramatic"
+      "idle"
     ],
     "bored_after_seconds": 20.0,
     "click_cooldown_seconds": 1.2,
     "crossfade_seconds": 0.25
   },
   "look_at": {
-    "bones": [
-      {
-        "slot": "neck",
-        "bone": "neck",
-        "weight": 0.3
-      },
-      {
-        "slot": "head",
-        "bone": "head",
-        "weight": 0.6
-      }
-    ],
+    "bones": [],
     "max_yaw_deg": 35.0,
     "max_pitch_deg": 20.0
   },
   "look": {
-    "toon": 0.5636,
+    "toon": 1.0,
     "threshold": 0.42,
-    "softness": 0.1,
+    "softness": 0.04,
     "light_gain": 1.0,
-    "shadow_color": "#3f456f",
-    "rim_color": "#ffa8ac",
-    "rim_strength": 1.8,
-    "rim_width": 0.5,
-    "saturation": 1.05,
-    "brightness": 0.98,
+    "shadow_color": "#e7bcd4",
+    "rim_color": "#ffffff",
+    "rim_strength": 0.55,
+    "rim_width": 0.35,
+    "saturation": 1.15,
+    "brightness": 1.06,
     "formula": "albedo = mix(flat, tex, textureMix); albedo = mix(albedo, clamp(tint*luma(albedo)*2), recolor); albedo = hsv(albedo, saturation, brightness); L = luma(diffuse light)*lightGain; t = mix(min(L,1), smoothstep(threshold-softness, threshold+softness, L), toon); rim = clamp(smoothstep(1-rimWidth, 1, facing)*(0.55+0.45t)*rimStrength) with facing = 1-|dot(N,V)|; color = mix(albedo*mix(shadowColor, 1, t), rimColor, rim) + albedo*glow"
   },
   "materials": [
     {
-      "name": "PCH_Test_Dress",
+      "name": "TK_Lily_Petal",
       "role": "outfit",
       "customizable": true,
-      "flat_color": "#f6e0c0",
-      "texture_mix": 0.0,
-      "tint": "#f3ffef",
+      "flat_color": "#f6f1e7",
+      "texture_mix": 1.0,
+      "tint": "#ffffff",
+      "recolor": 0.0,
+      "glow": 0.0
+    },
+    {
+      "name": "TK_Lily_Center",
+      "role": "outfit",
+      "customizable": true,
+      "flat_color": "#f6f1e7",
+      "texture_mix": 1.0,
+      "tint": "#ffffff",
+      "recolor": 0.0,
+      "glow": 0.0
+    },
+    {
+      "name": "TK_Lily_Stem",
+      "role": "outfit",
+      "customizable": true,
+      "flat_color": "#f6f1e7",
+      "texture_mix": 1.0,
+      "tint": "#ffffff",
+      "recolor": 0.0,
+      "glow": 0.0
+    },
+    {
+      "name": "TK_Orchid_Petal",
+      "role": "outfit",
+      "customizable": true,
+      "flat_color": "#f6f1e7",
+      "texture_mix": 1.0,
+      "tint": "#ffffff",
+      "recolor": 0.0,
+      "glow": 0.0
+    },
+    {
+      "name": "TK_Orchid_Center",
+      "role": "outfit",
+      "customizable": true,
+      "flat_color": "#f6f1e7",
+      "texture_mix": 1.0,
+      "tint": "#ffffff",
+      "recolor": 0.0,
+      "glow": 0.0
+    },
+    {
+      "name": "TK_Orchid_Stem",
+      "role": "outfit",
+      "customizable": true,
+      "flat_color": "#f6f1e7",
+      "texture_mix": 1.0,
+      "tint": "#ffffff",
       "recolor": 0.0,
       "glow": 0.0
     }

@@ -1,4 +1,4 @@
-// Persona Studio export · Neon City · 2026-10-26 · re-export overwrites this file
+// Persona Studio export · GirliePop + Soft Paper · 2026-10-26 · re-export overwrites this file
 import { useText } from "../context/PersonaTextContext";
 import { Icon } from "./Icon";
 import { CHIP_ICON, CHIP_SIZE, CHIP_SKIN, DOCK } from "./layout";

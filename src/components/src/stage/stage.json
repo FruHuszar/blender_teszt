@@ -1,0 +1,178 @@
+{
+  "generator": "Persona Studio 2.5",
+  "style": "neon_city",
+  "fps": 30,
+  "loop_frames": 24,
+  "loop_seconds": 0.8,
+  "breakpoints": {
+    "base": 0,
+    "md": 768,
+    "lg": 1024
+  },
+  "coordinates": "glTF / three.js (y up, character faces +z)",
+  "camera_model": {
+    "fov": "vertical, degrees (PerspectiveCamera.fov)",
+    "placement": "camera at position, looking at target (per breakpoint, chosen by window width like Tailwind)",
+    "anchor": "focus point screen position 0..1 from left/top, kept for any window size via view offset",
+    "view_offset": "x = (0.5 - anchor_x) * W ; y = (0.5 - anchor_y) * H ; camera.setViewOffset(W, H, x, y, W, H)"
+  },
+  "layers": {
+    "order": [
+      "backdrop video (object-fit: cover)",
+      "three.js canvas (transparent, character)",
+      "foreground png (object-fit: cover, pointer-events: none)",
+      "UI (App.tsx + components/)"
+    ],
+    "plate_choice": "portrait plate when window width < height, else landscape"
+  },
+  "focus": [
+    0.0,
+    1.15,
+    -0.0
+  ],
+  "shots": {
+    "base": {
+      "fov": 29.8,
+      "distance": 3.705,
+      "yaw": 7.0,
+      "pitch": 1.3,
+      "anchor_x": 0.5,
+      "anchor_y": 0.444,
+      "position": [
+        0.45141,
+        1.24006,
+        3.67644
+      ],
+      "target": [
+        0.0,
+        1.156,
+        -0.0
+      ]
+    },
+    "md": {
+      "fov": 27.8,
+      "distance": 4.68,
+      "yaw": 9.0,
+      "pitch": 1.3,
+      "anchor_x": 0.5,
+      "anchor_y": 0.374,
+      "position": [
+        0.73192,
+        1.26218,
+        4.62119
+      ],
+      "target": [
+        0.0,
+        1.156,
+        -0.0
+      ]
+    },
+    "lg": {
+      "fov": 24.8,
+      "distance": 4.485,
+      "yaw": 9.0,
+      "pitch": 1.3,
+      "anchor_x": 0.42,
+      "anchor_y": 0.424,
+      "position": [
+        0.70143,
+        1.25775,
+        4.42864
+      ],
+      "target": [
+        0.0,
+        1.156,
+        -0.0
+      ]
+    }
+  },
+  "lights": [
+    {
+      "name": "PS_Key",
+      "type": "sun",
+      "direction": [
+        0.35574,
+        -0.48481,
+        -0.799
+      ],
+      "color": "#fffcfd",
+      "color_linear": [
+        1.0,
+        0.97,
+        0.98
+      ],
+      "strength": 2.924,
+      "note": "sun: a white surface facing it gets strength / pi (= three.js DirectionalLight)"
+    },
+    {
+      "name": "PS_Fill",
+      "type": "sun",
+      "direction": [
+        -0.43301,
+        -0.5,
+        0.75
+      ],
+      "color": "#ffeff6",
+      "color_linear": [
+        1.0,
+        0.86,
+        0.92
+      ],
+      "strength": 0.448,
+      "note": "sun: a white surface facing it gets strength / pi (= three.js DirectionalLight)"
+    },
+    {
+      "name": "PS_Rim",
+      "type": "sun",
+      "direction": [
+        -0.16318,
+        -0.34202,
+        0.92542
+      ],
+      "color": "#fff3f9",
+      "color_linear": [
+        1.0,
+        0.9,
+        0.95
+      ],
+      "strength": 0.504,
+      "note": "sun: a white surface facing it gets strength / pi (= three.js DirectionalLight)"
+    }
+  ],
+  "world": {
+    "color_linear": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "strength": 0.264,
+    "note": "uniform world light: three.js AmbientLight(color, PI * strength)"
+  },
+  "palette": {
+    "void": "#fdeef3",
+    "deep": "#ffffff",
+    "mist": "#f8c9d8",
+    "jade": "#f0689a",
+    "gold": "#f4b3c8",
+    "glow": "#fff1f6",
+    "ember": "#ff8fb1",
+    "ivory": "#ffffff",
+    "ink": "#4a2c3a"
+  },
+  "plates": {
+    "landscape": {
+      "width": 1920,
+      "height": 1080,
+      "video": "bg_landscape.mp4",
+      "poster": "bg_landscape_poster.jpg",
+      "foreground": "fg_landscape.png"
+    },
+    "portrait": {
+      "width": 1080,
+      "height": 1920,
+      "video": "bg_portrait.mp4",
+      "poster": "bg_portrait_poster.jpg",
+      "foreground": "fg_portrait.png"
+    }
+  }
+}

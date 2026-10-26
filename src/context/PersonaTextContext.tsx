@@ -1,4 +1,4 @@
-// Persona Studio export · Neon City · 2026-10-26 · re-export overwrites this file
+// Persona Studio export · GirliePop + Soft Paper · 2026-10-26 · re-export overwrites this file
 import { createContext, useContext, useMemo, type ReactNode } from "react";
 import { PERSONA_TEXT, type PersonaText } from "./personaText";
 

@@ -1,7 +1,7 @@
-<!-- Persona Studio export · Neon City · 2026-10-26 · re-export overwrites this file -->
+<!-- Persona Studio export · GirliePop + Soft Paper · 2026-10-26 · re-export overwrites this file -->
 # Persona app
 
-React 19 + Tailwind v4 + three.js project exported by Persona Studio (Neon City).
+React 19 + Tailwind v4 + three.js project exported by Persona Studio (GirliePop + Soft Paper).
 
 ## Run
 ```bash
